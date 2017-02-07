@@ -8,6 +8,9 @@ As of today by basic setup includes:
 * git aliasses
 * vim configuration
 * vscode
+* Bartender
+* 1Password
+* Spectacle
 
 ## Installation
 
