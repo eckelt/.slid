@@ -127,8 +127,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias code="open -a Visual\ Studio\ Code"
+alias git=hub
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
 # Set costa digital unit specific "secret" vars
-. ~/Sources/envvars.sh
+#. ~/Sources/envvars.sh
+export GOROOT=/usr/local/opt/go/libexec/
+export GOPATH=~/go
+export PATH=$PATH:$GOROOT:$GOPATH/bin
