@@ -18,7 +18,7 @@ BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo -e "\xee\xa1\xa9 Installing software with Homebrew..."
-brew install openssl nvm
+brew install openssl nvm go hub
 
 # UNCOMMENT FOLLOWING LINT TO INSTALL oh-my-zsh
 #   see http://ohmyz.sh
