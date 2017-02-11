@@ -132,6 +132,9 @@ alias git=hub
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# add autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 # Set costa digital unit specific "secret" vars
 #. ~/Sources/envvars.sh
 export GOROOT=/usr/local/opt/go/libexec/
