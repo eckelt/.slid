@@ -30,6 +30,8 @@ brew install openssl nvm go hub autojump
 # install powerline font
 #   see https://github.com/gabrielelana/awesome-terminal-fonts/
 
+ln -s $BASEDIR/font/Inconsolata-Awesome.sh ~/.oh-my-zsh/custom/fonts/Inconsolata-Awesome.sh
+
 ### SET CONFIG FILE SYMBOLIC LINKS
 echo -e "\xee\x87\x81 Setting links..."
 cd ~
