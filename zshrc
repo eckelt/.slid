@@ -7,13 +7,21 @@ export ZSH=/Users/401189/.oh-my-zsh
 # install proper icon aliasses
 source $ZSH/custom/fonts/Inconsolata-Awesome.sh
 
+# install notification plugin
+source $ZSH/custom/plugins/push_notification/push_notification.plugin.zsh
+
+COMPLETION_WAITING_DOTS="true"
+setopt HIST_EXPIRE_DUPS_FIRST  # ignore command starts with space from being added to history
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   dir
-  nvm
+#  nvm
+  go
   git
   status
 )
@@ -31,6 +39,9 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 BULLETTRAIN_GIT_COMMIT_SHOW=true
 BULLETTRAIN_GIT_COMMIT_BG_COLOR="black"
 BULLETTRAIN_GIT_COMMIT_FG_COLOR="blue"
+BULLETTRAIN_GO_BG="006"
+BULLETTRAIN_GO_FG="black"
+BULLETTRAIN_GO_PREFIX="go"
 
 # CIRCLES
 BULLETTRAIN_GIT_UNTRACKED=" \\u$CODEPOINT_OF_AWESOME_QUESTION_SIGN "
@@ -129,6 +140,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias code="open -a Visual\ Studio\ Code"
 alias git=hub
+alias marked="open -a Marked\ 2 $*"
+alias finder="open -a Finder $*"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
@@ -139,4 +152,6 @@ export NVM_DIR="$HOME/.nvm"
 #. ~/Sources/envvars.sh
 export GOROOT=/usr/local/opt/go/libexec/
 export GOPATH=~/go
-export PATH=$PATH:$GOROOT:$GOPATH/bin
+export PATH=$PATH:$GOROOT:$GOPATH/bin:~/Sources/cdu-aws-base/
+
+eval "$(direnv hook zsh)"
