@@ -148,6 +148,12 @@ export NVM_DIR="$HOME/.nvm"
 # add autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+func myip() {
+	ip=`ifconfig | grep 10.8 | cut -d " " -f 2`
+	echo ${ip} | pbcopy
+	echo "\e[1m${ip}\t\e[2m(It's also copied in your clipboard)"
+}
+
 # Set costa digital unit specific "secret" vars
 #. ~/Sources/envvars.sh
 export GOROOT=/usr/local/opt/go/libexec/
